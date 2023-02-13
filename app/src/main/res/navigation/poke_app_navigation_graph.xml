@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/poke_app_navigation_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/pokemonListFragment"
+        android:name="com.example.pokeapilulo.app.pokemon_list.PokemonListFragment"
+        android:label="fragment_pokemon_list"
+        tools:layout="@layout/fragment_pokemon_list" >
+        <action
+            android:id="@+id/action_pokemonListFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/pokemonDetailFragment"
+        android:name="com.example.pokeapilulo.app.detail.PokemonDetailFragment"
+        android:label="fragment_pokemon_detail"
+        tools:layout="@layout/fragment_pokemon_detail" >
+        <argument
+            android:name="pokemon_selected"
+            app:argType="com.example.pokeapilulo.app.model.PokemonModelView" />
+    </dialog>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.pokeapilulo.app.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_pokemonListFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/pokemonListFragment"
+            app:popUpTo="@+id/poke_app_navigation_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PokeApiLulo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="detail_moves_title">Moves:</string>
+    <string name="detail_abilities_title">Abilities:</string>
+    <string name="detail_experience_title">Experience:</string>
+
+    <string name="dialog_error_tile">Algo no salió como queríamos</string>
+    <string name="dialog_error_positive_button">Reintentar</string>
+    <string name="dialog_error_negative_button">Salir de la app</string>
+    <string name="dialog_error_msg">Lo sentimos \u2639 \nEn este momento no pudimos entregarte lo que querías \n\nDanos otra oportunidad \n\nSi no funciona sal e ingresa nuevamente</string>
+    <string name="dialog_error_detail_msg">Lo sentimos \u2639 \nEn este momento esta información no está disponible</string>
+
+    <string name="dialog_internet_error_title">Houston! No tenemos conexión a internet</string>
+    <string name="dialog_internet_error_msg">Verifica la conexión a internet en tu dispositivo</string>
+
+</resources>
