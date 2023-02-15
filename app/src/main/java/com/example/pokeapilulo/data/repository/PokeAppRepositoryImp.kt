@@ -3,7 +3,7 @@ package com.example.pokeapilulo.data.repository
 import com.example.pokeapilulo.data.model.mapToDomain
 import com.example.pokeapilulo.domain.datasource.PokeAppDataSource
 import com.example.pokeapilulo.domain.model.PokemonDetailEntity
-import com.example.pokeapilulo.domain.model.PokemonListPaginentity
+import com.example.pokeapilulo.domain.model.PokemonListPaginEntity
 import com.example.pokeapilulo.domain.repository.PokeAppRepository
 import com.example.pokeapilulo.util.ResponseStatus
 import com.example.pokeapilulo.util.ResponseWrapper.ResponseStatus.SUCCESS
@@ -14,14 +14,14 @@ class PokeAppRepositoryImp @Inject constructor(
     private val pokeAppDataSource: PokeAppDataSource
 ) : PokeAppRepository{
 
-    override suspend fun getAllPokemon(offset: Int, limit: Int): ResponseStatus<PokemonListPaginentity> {
+    override suspend fun getAllPokemon(offset: Int, limit: Int): ResponseStatus<PokemonListPaginEntity> {
 
         val response = pokeAppDataSource.getAllPokemon(offset, limit)
         return when (response.responseStatus) {
 
             is SUCCESS -> response.responseData.let {
                  ResponseStatus.Succes(
-                    PokemonListPaginentity(
+                    PokemonListPaginEntity(
                         count = it?.count ?: 0,
                         next = it?.next ?: "",
                         previous = it?.previous ?: "",

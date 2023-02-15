@@ -1,6 +1,6 @@
 package com.example.pokeapilulo.domain.model
 
-data class PokemonListPaginentity(
+data class PokemonListPaginEntity(
     val count: Int,
     val next: String,
     val previous: String,

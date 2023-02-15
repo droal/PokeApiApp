@@ -88,6 +88,8 @@ dependencies {
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:${getStringExtra("testCoroutineVersion")}")
     testImplementation ("org.mockito:mockito-core:${getStringExtra("mockitoVersion")}")
     testImplementation ("io.mockk:mockk:${getStringExtra("mockkVersion")}")
+    testImplementation ("androidx.arch.core:core-testing:${getStringExtra("androidxArchVersion")}")
+    testImplementation ("com.nhaarman.mockitokotlin2:mockito-kotlin:${getStringExtra("mockitoKotlinVersion")}")
 }
 
 fun getIntExtra(name: String) = rootProject.extra[name] as Int

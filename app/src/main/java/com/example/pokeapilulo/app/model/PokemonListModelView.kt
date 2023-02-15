@@ -1,6 +1,6 @@
 package com.example.pokeapilulo.app.model
 
-import com.example.pokeapilulo.domain.model.PokemonListPaginentity
+import com.example.pokeapilulo.domain.model.PokemonListPaginEntity
 
 data class PokemonListModelView(
     val count: Int,
@@ -9,7 +9,7 @@ data class PokemonListModelView(
     val result: List<PokemonModelView>
 )
 
-fun PokemonListPaginentity.mapToModelView() = PokemonListModelView(count, next, previous, result.mapToModelView())
+fun PokemonListPaginEntity.mapToModelView() = PokemonListModelView(count, next, previous, result.mapToModelView())
 
 
 

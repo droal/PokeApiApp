@@ -26,7 +26,6 @@ class SplashFragment : Fragment() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToPokemonListFragment())
-           // findNavController().navigate(R.id.action_splashFragment_to_pokemonListFragment)
         }, 2000)
 
     }

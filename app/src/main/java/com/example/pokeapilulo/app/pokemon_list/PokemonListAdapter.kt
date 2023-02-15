@@ -19,11 +19,6 @@ class PokemonListAdapter(
         notifyItemRangeInserted(oldCount, listSize)
     }
 
-    fun setPokemonList(newData: List<PokemonModelView>){
-        pokemonList = newData.toMutableList()
-        notifyDataSetChanged()
-    }
-
 
     inner class ViewHolder(
         private val bindingItem: ItemPokemonListBinding,

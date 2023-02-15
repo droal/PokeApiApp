@@ -31,5 +31,6 @@ ext {
     extra["testCoroutineVersion"] = "1.6.4"
     extra["mockitoVersion"] = "4.9.0"
     extra["mockkVersion"] = "1.13.3"
-
+    extra["androidxArchVersion"] = "2.1.0"
+    extra["mockitoKotlinVersion"] = "2.2.0"
 }
